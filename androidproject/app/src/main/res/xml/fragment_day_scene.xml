@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        >
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/email"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        >
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/email"
+        motion:duration="1000"
+        >
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+
+
+    <Transition
+        motion:constraintSetEnd="@+id/link"
+        motion:constraintSetStart="@id/reminder"
+        motion:duration="1000"
+        >
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/link"
+        motion:constraintSetStart="@id/email"
+        motion:duration="1000"
+        >
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/email"
+        motion:constraintSetStart="@id/reminder"
+        motion:duration="1000"
+        >
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/email"
+        motion:constraintSetStart="@id/link"
+        motion:duration="1000"
+        >
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/reminder"
+        motion:constraintSetStart="@id/email"
+        motion:duration="1000"
+        >
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+
+
+    <Transition
+        motion:constraintSetEnd="@+id/reminder"
+        motion:constraintSetStart="@id/link"
+        motion:duration="1000"
+        >
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionProgress="0"
+                />
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionProgress="100"
+                />
+        </KeyFrameSet>
+    </Transition>
+
+
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/reminder">
+        <Constraint
+            android:id="@+id/dayFragment_addCloseBackGround"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/dayFragment_addClosetHelperEnd"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            motion:layout_constraintHorizontal_bias="1.0"
+            motion:layout_constraintTop_toTopOf="@id/dayFragment_addCloseButton" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintTop_toTopOf="@id/dayFragment_addCloseBackGround"
+            android:layout_marginLeft="@dimen/mg_mds"
+            android:layout_marginTop="@dimen/mg_md" />
+
+        <Constraint
+            android:id="@+id/dayFragment_addCloseLocationIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseType"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLocationIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLocationIcon"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLocationIcon" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseButton"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLinkIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLinkIcon"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLinkIcon" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseType"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetBody"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetTitle"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginRight="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetHour"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_chainStyle="spread_inside"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            motion:layout_constraintRight_toLeftOf="@id/dayFragment_addClosetMin"
+            android:layout_marginRight="@dimen/mg_sms"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetMin"
+            motion:layout_constraintLeft_toRightOf="@id/dayFragment_addClosetHour"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            android:layout_marginLeft="@dimen/mg_sms"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetLink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetHour"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetHelperEnd"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetLink"
+            motion:layout_constraintLeft_toLeftOf="parent" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetSubmtin"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/dayFragment_addCloseBackGround"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround" />
+        <Constraint
+            android:id="@+id/dayFragment_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseIconBG"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_dayTitle"
+            android:rotation="0"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md" />
+        <Constraint
+            android:id="@+id/dayFragment_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md"
+            android:visibility="visible" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/email">
+        <Constraint
+            android:id="@+id/dayFragment_addCloseBackGround"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/dayFragment_addClosetHelperEnd"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            motion:layout_constraintHorizontal_bias="1.0"
+            motion:layout_constraintTop_toTopOf="@id/dayFragment_addCloseButton" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintTop_toTopOf="@id/dayFragment_addCloseBackGround"
+            android:layout_marginLeft="@dimen/mg_mds"
+            android:layout_marginTop="@dimen/mg_md" />
+
+        <Constraint
+            android:id="@+id/dayFragment_addCloseLocationIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseType"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLocationIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLocationIcon"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLocationIcon" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseButton"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLinkIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLinkIcon"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLinkIcon" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseType"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetBody"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetTitle"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginRight="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetHour"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_chainStyle="spread_inside"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            motion:layout_constraintRight_toLeftOf="@id/dayFragment_addClosetMin"
+            android:layout_marginRight="@dimen/mg_sms"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetMin"
+            motion:layout_constraintLeft_toRightOf="@id/dayFragment_addClosetHour"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            android:layout_marginLeft="@dimen/mg_sms"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetLink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetHour"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetHelperEnd"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_emailAddress"
+            motion:layout_constraintLeft_toLeftOf="parent" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetSubmtin"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/dayFragment_addCloseBackGround"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround" />
+        <Constraint
+            android:id="@+id/dayFragment_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseIconBG"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseLocationIcon"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseLocationIcon"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_dayTitle"
+
+            android:rotation="0"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md" />
+        <Constraint
+            android:id="@+id/dayFragment_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/dayFragment_emailAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetLink"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds" />
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/link">
+        <Constraint
+            android:id="@+id/dayFragment_addCloseBackGround"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="@id/dayFragment_addClosetHelperEnd"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            motion:layout_constraintHorizontal_bias="1.0"
+            motion:layout_constraintTop_toTopOf="@id/dayFragment_addCloseButton" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintTop_toTopOf="@id/dayFragment_addCloseBackGround"
+            android:layout_marginLeft="@dimen/mg_mds"
+            android:layout_marginTop="@dimen/mg_md" />
+
+        <Constraint
+            android:id="@+id/dayFragment_addCloseLocationIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseType"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLocationIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLocationIcon"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLocationIcon" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseButton"
+            motion:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLinkIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLinkIcon"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLinkIcon" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseType"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseReminderIcon"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetBody"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetTitle"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginRight="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetHour"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_chainStyle="spread_inside"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            motion:layout_constraintRight_toLeftOf="@id/dayFragment_addClosetMin"
+            android:layout_marginRight="@dimen/mg_sms"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetMin"
+            motion:layout_constraintLeft_toRightOf="@id/dayFragment_addClosetHour"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            android:layout_marginLeft="@dimen/mg_sms"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetLink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetHour"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+            android:layout_marginTop="@dimen/mg_mds" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetHelperEnd"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetLink"
+            motion:layout_constraintLeft_toLeftOf="parent" />
+        <Constraint
+            android:id="@+id/dayFragment_addClosetSubmtin"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/dayFragment_addCloseBackGround"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround"
+            motion:layout_constraintEnd_toEndOf="@+id/dayFragment_emailAddress"
+            motion:layout_constraintStart_toStartOf="@+id/dayFragment_emailAddress" />
+        <Constraint
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseIconBG"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+            android:visibility="visible"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_addCloseLinkIcon"
+            motion:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+        <Constraint
+            android:id="@+id/dayFragment_addCloseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_dayTitle"
+            android:rotation="0"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="@dimen/mg_md" />
+        <Constraint
+            android:id="@+id/dayFragment_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin"
+            motion:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+            motion:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+            android:layout_marginTop="80dp"
+            android:visibility="visible" />
+    </ConstraintSet>
+</MotionScene>

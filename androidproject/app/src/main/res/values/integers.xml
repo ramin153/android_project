@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="splashActivity_time">6000</integer>
+    <integer name="homeActivity_navTime">400</integer>
+</resources>

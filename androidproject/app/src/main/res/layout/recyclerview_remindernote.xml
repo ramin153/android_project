@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerRemindernote_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:rotationY="0"
+    android:layout_marginTop="@dimen/mg_md"
+    android:layout_marginBottom="@dimen/mg_sms">
+
+    <ImageView
+        android:id="@+id/recyclerRemindernote_backGround"
+        android:layout_width="0dp"
+        android:layout_height="104dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_fullround_g_primary00white"
+/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/recyclerRemindernote_noteGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="52dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/recyclerRemindernote_leftGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/recyclerRemindernote_rightGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/mg_md" />
+
+
+    <TextView
+        android:id="@+id/recyclerRemindernote_date"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:rotation="90"
+        android:text="2020/12/31"
+        android:textColor="@color/colorPrimaryDark_light"
+        android:textSize="@dimen/font_lgs"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerRemindernote_noteGuidline"
+        app:layout_constraintStart_toStartOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintTop_toTopOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/recyclerRemindernote_leftLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark_dark"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerRemindernote_leftGuidline"
+        app:layout_constraintTop_toTopOf="@id/recyclerRemindernote_backGround"
+        />
+
+    <TextView
+        android:id="@+id/recyclerRemindernote_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mg_sms"
+        android:layout_marginTop="@dimen/mg_sms"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="title of text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/font_md"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerRemindernote_leftGuidline"
+        app:layout_constraintRight_toRightOf="@id/recyclerRemindernote_rightGuidline"
+        app:layout_constraintTop_toTopOf="@id/recyclerRemindernote_backGround"
+        />
+
+    <TextView
+        android:id="@+id/recyclerRemindernote_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/mg_sms"
+        android:layout_marginLeft="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="text will writen here "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/font_mds"
+        android:scrollbars = "vertical"
+        app:layout_constraintBottom_toTopOf="@id/recyclerRemindernote_delete"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerRemindernote_leftGuidline"
+        app:layout_constraintRight_toRightOf="@+id/recyclerRemindernote_title"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerRemindernote_title" />
+
+    <Button
+        android:id="@+id/recyclerRemindernote_delete"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerRemindernote_text"
+        android:background="@drawable/btn_g_fround_delete"
+        android:textSize="@dimen/font_md"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <Button
+        android:id="@+id/recyclerRemindernote_link"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerRemindernote_backGround"
+        app:layout_constraintRight_toRightOf="@id/recyclerRemindernote_text"
+        android:background="@drawable/btn_accenct_primarylight"
+        android:textSize="@dimen/font_md"
+        android:text="Link"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textStyle="bold"
+        android:textColor="@color/colorMintCream"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

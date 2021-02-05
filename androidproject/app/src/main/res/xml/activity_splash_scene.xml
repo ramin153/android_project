@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:autoTransition="animateToEnd"
+        motion:duration="@integer/splashActivity_time">
+
+        <KeyFrameSet>
+
+
+
+                <!--           location icon-->
+
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="11"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX="0.5"
+                    motion:percentY="0.9"
+
+                    />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="18"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".9"
+                    motion:percentY=".5" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="24"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".25" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="28"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".4"
+                    motion:percentY=".4"
+                    motion:curveFit="spline"/>
+
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="30"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".5"
+                    motion:curveFit="spline"/>
+
+
+            <KeyAttribute
+                    android:alpha="1"
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="24"
+                    />
+                <KeyAttribute
+                    android:alpha="0"
+                    motion:motionTarget="@+id/splashActivity_iconLocation"
+                    motion:framePosition="30"
+                    />
+
+
+
+
+                <!--           time icon-->
+
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="11"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX="0.5"
+                    motion:percentY="0.9" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="18"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".1"
+                    motion:percentY=".5" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="24"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".25" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="28"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".6"
+                    motion:percentY=".4"
+                    motion:curveFit="spline"/>
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="30"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".5"
+                    motion:curveFit="spline"/>
+
+
+                <KeyAttribute
+                    android:alpha="1"
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="24"
+                    />
+                <KeyAttribute
+                    android:alpha="0"
+                    motion:motionTarget="@+id/splashActivity_iconTime"
+                    motion:framePosition="30"
+                    />
+
+
+                <!--           calender icon-->
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="11"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX="0.5"
+                    motion:percentY="0.1" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="18"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".1"
+                    motion:percentY=".5" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="24"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".75" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="28"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".6"
+                    motion:percentY=".6"
+                    motion:curveFit="spline"/>
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="30"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".5"
+                    motion:curveFit="spline"/>
+
+
+
+            <KeyAttribute
+                    android:alpha="1"
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="24"
+                    />
+                <KeyAttribute
+                    android:alpha="0"
+                    motion:motionTarget="@+id/splashActivity_iconCalender"
+                    motion:framePosition="30"
+                    />
+
+
+                <!--           note icon-->
+
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="11"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX="0.5"
+                    motion:percentY="0.1" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="18"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".9"
+                    motion:percentY=".5" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="24"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".75" />
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="28"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".4"
+                    motion:percentY=".6"
+                    motion:curveFit="spline"/>
+                <KeyPosition
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="30"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX=".5"
+                    motion:percentY=".5"
+                    motion:curveFit="spline"/>
+
+                <KeyAttribute
+                    android:alpha="1"
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="24"
+                    />
+                <KeyAttribute
+                    android:alpha="0"
+                    motion:motionTarget="@+id/splashActivity_iconNote"
+                    motion:framePosition="30"
+                    />
+
+
+                <!--           main icon-->
+
+                <KeyAttribute
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    motion:motionTarget="@+id/splashActivity_mainIcon"
+                    motion:framePosition="24"
+                    />
+                <KeyAttribute
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    motion:motionTarget="@+id/splashActivity_mainIcon"
+                    motion:framePosition="28"
+                    />
+                <KeyAttribute
+                    android:scaleX=".7"
+                    android:scaleY=".7"
+                    motion:motionTarget="@+id/splashActivity_mainIcon"
+                    motion:framePosition="32"
+                    />
+
+
+
+
+
+
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:motionTarget="@+id/splashActivity_mainIcon"
+                motion:framePosition="30"
+                />
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionTarget="@+id/splashActivity_mainIcon"
+                motion:framePosition="40"
+                />
+            <KeyAttribute
+                android:rotation="0"
+                motion:motionTarget="@+id/splashActivity_mainIcon"
+                motion:framePosition="30"
+                />
+            <KeyAttribute
+                android:rotation="360"
+                motion:motionTarget="@+id/splashActivity_mainIcon"
+                motion:framePosition="40"
+                />
+
+
+            <!--           main explosion-->
+
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconExplosion"
+                motion:framePosition="35"
+                android:scaleY=".7"
+                android:scaleX=".7"
+                android:alpha="0"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconExplosion"
+                motion:framePosition="42"
+                android:scaleY="1.3"
+                android:scaleX="1.3"
+                android:alpha="1"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconExplosion"
+                motion:framePosition="49"
+                android:scaleY=".7"
+                android:scaleX=".7"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconExplosion"
+                motion:framePosition="56"
+                android:scaleY="1.3"
+                android:scaleX="1.3"
+                android:alpha="0"
+                />
+            <!--           phone icon-->
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="45"
+                android:rotation="45"
+                android:alpha="0"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="50"
+                android:rotation="-45"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="55"
+                android:rotation="45"
+                android:alpha="1"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="60"
+                android:rotation="-45"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="65"
+                android:rotation="45"
+
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="70"
+                android:rotation="-45"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="75"
+                android:rotation="45"
+
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="80"
+                android:rotation="-45"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="87"
+                android:rotation="45"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="93"
+                android:rotation="-30"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="100"
+                android:rotation="0"
+                />
+            <KeyAttribute
+                motion:motionTarget="@+id/splashActivity_iconPhone"
+                motion:framePosition="100"
+                android:alpha="1"
+                />
+
+<!--            text-->
+                <KeyAttribute
+                    android:alpha="0"
+                    motion:framePosition="80"
+                    motion:motionTarget="@string/splashActivity_text"
+                    />
+                <KeyPosition
+                    motion:framePosition="80"
+                    motion:keyPositionType="pathRelative"
+                    motion:percentY="0"
+                    motion:motionTarget="@string/splashActivity_text"
+                    />
+
+                <KeyAttribute
+                    android:alpha="0"
+                    motion:framePosition="100"
+                    motion:motionTarget="@string/splashActivity_text"
+                    />
+                <KeyPosition
+                    motion:framePosition="100"
+                    motion:keyPositionType="pathRelative"
+                    motion:percentY=".5"
+                    motion:motionTarget="@string/splashActivity_text"
+                />
+
+
+        </KeyFrameSet>
+
+    </Transition>
+
+
+
+    <ConstraintSet android:id="@+id/start">
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/splashActivity_iconPhone"
+            android:visibility="visible"
+            />
+
+
+        <Constraint
+            android:layout_height="@dimen/icon_splash"
+            motion:layout_constraintTop_toTopOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintLeft_toLeftOf="@+id/splashActivity_guidelineLeft"
+            android:layout_width="@dimen/icon_splash"
+            motion:layout_constraintStart_toStartOf="@+id/splashActivity_mainIcon"
+            android:id="@+id/splashActivity_iconLocation"
+            motion:layout_constraintEnd_toEndOf="@+id/splashActivity_mainIcon"
+            android:rotation="360"
+            motion:layout_constraintBottom_toBottomOf="@+id/splashActivity_mainIcon"
+            android:visibility="invisible" />
+        <Constraint
+            android:layout_height="@dimen/icon_splash"
+            motion:layout_constraintTop_toTopOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintRight_toRightOf="@+id/splashActivity_guidelineRight"
+            android:layout_width="@dimen/icon_splash"
+            android:id="@+id/splashActivity_iconTime"
+            android:rotation="360"
+            motion:layout_constraintStart_toStartOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintEnd_toEndOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintBottom_toBottomOf="@+id/splashActivity_mainIcon"
+            android:visibility="invisible" />
+        <Constraint
+            android:layout_height="@dimen/icon_splash"
+            motion:layout_constraintBottom_toBottomOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintRight_toRightOf="@+id/splashActivity_guidelineRight"
+            android:layout_width="@dimen/icon_splash"
+            motion:layout_constraintStart_toStartOf="@+id/splashActivity_mainIcon"
+            android:id="@+id/splashActivity_iconCalender"
+            android:rotation="360"
+            motion:layout_constraintEnd_toEndOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintTop_toTopOf="@+id/splashActivity_mainIcon"
+            android:visibility="invisible" />
+        <Constraint
+            android:layout_height="@dimen/icon_splash"
+            motion:layout_constraintBottom_toBottomOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintLeft_toLeftOf="@+id/splashActivity_guidelineLeft"
+            android:layout_width="@dimen/icon_splash"
+            motion:layout_constraintStart_toStartOf="@+id/splashActivity_mainIcon"
+            android:id="@+id/splashActivity_iconNote"
+            android:rotation="360"
+            motion:layout_constraintEnd_toEndOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintTop_toTopOf="@+id/splashActivity_mainIcon"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/splashActivity_mainIcon"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/icon_splash_lg"
+            android:layout_height="@dimen/icon_splash_lg"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.5"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/splashActivity_iconPhone"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/icon_splash_lg"
+            android:layout_height="@dimen/icon_splash_lg"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/splashActivity_mainIcon"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:id="@+id/splashActivity_text" />
+    </ConstraintSet>
+</MotionScene>

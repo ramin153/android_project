@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerEmailAddress_main"
+    android:layout_marginTop="@dimen/mg_md"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/recyclerEmailAddress_backGround"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_fullround_g_primary_aacent"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/recyclerEmailAddress_noteGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="52dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/recyclerEmailAddress_leftGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/recyclerEmailAddress_rightGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/mg_md" />
+
+
+    <TextView
+        android:id="@+id/recyclerEmailAddress_date"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:rotation="90"
+        android:text="2020/12/31"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_lgs"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerEmailAddress_noteGuidline"
+        app:layout_constraintStart_toStartOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintTop_toTopOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/recyclerEmailAddress_leftLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark_dark"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerEmailAddress_leftGuidline"
+        app:layout_constraintTop_toTopOf="@id/recyclerEmailAddress_backGround"
+        />
+
+    <TextView
+        android:id="@+id/recyclerEmailAddress_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mg_sms"
+        android:layout_marginTop="@dimen/mg_sms"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="title of text"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_md"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerEmailAddress_leftGuidline"
+        app:layout_constraintRight_toRightOf="@id/recyclerEmailAddress_rightGuidline"
+        app:layout_constraintTop_toTopOf="@id/recyclerEmailAddress_backGround"
+        />
+
+    <TextView
+        android:id="@+id/recyclerEmailAddress_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mg_sms"
+        android:layout_marginTop="@dimen/mg_sms"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="email"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_mds"
+        android:textStyle="italic|bold"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerEmailAddress_leftGuidline"
+        app:layout_constraintRight_toRightOf="@id/recyclerEmailAddress_rightGuidline"
+        app:layout_constraintTop_toBottomOf="@id/recyclerEmailAddress_title"
+        />
+
+    <TextView
+        android:id="@+id/recyclerEmailAddress_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/mg_sms"
+        android:layout_marginLeft="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="text will writen here "
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_mds"
+        android:scrollbars = "vertical"
+        app:layout_constraintBottom_toTopOf="@id/recyclerEmailAddress_delete"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerEmailAddress_leftGuidline"
+        app:layout_constraintRight_toRightOf="@+id/recyclerEmailAddress_title"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerEmailAddress_address" />
+
+    <Button
+        android:id="@+id/recyclerEmailAddress_delete"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerEmailAddress_text"
+        android:background="@drawable/btn_g_fround_delete"
+        android:textSize="@dimen/font_md"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark_dark"
+        />
+
+    <Button
+        android:id="@+id/recyclerEmailAddress_send"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerEmailAddress_backGround"
+        app:layout_constraintRight_toRightOf="@id/recyclerEmailAddress_text"
+        android:background="@drawable/btn_mintwhite_primarylight"
+        android:textSize="@dimen/font_md"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark_dark"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

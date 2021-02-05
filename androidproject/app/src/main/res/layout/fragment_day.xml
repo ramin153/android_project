@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dayFragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_day_scene"
+    tools:context=".fragment.DayFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dayFragment_guideLineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/mg_sm" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dayFragment_guideLineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_end="@dimen/mg_sm" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dayFragment_guideLineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/mg_md" />
+
+
+    <TextView
+        android:id="@+id/dayFragment_dayTitleUnderLineRight"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:alpha=".50"
+        android:background="@color/colorPrimary_light"
+        app:layout_constraintBottom_toBottomOf="@id/dayFragment_dayTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFragment_dayTitle"
+        app:layout_constraintTop_toTopOf="@id/dayFragment_dayTitle"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/dayFragment_dayTitleUnderLineLeft"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:alpha=".50"
+        android:background="@color/colorPrimary_light"
+        app:layout_constraintBottom_toBottomOf="@id/dayFragment_dayTitle"
+        app:layout_constraintEnd_toStartOf="@+id/dayFragment_dayTitle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dayFragment_dayTitle"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/dayFragment_dayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="sunday"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_lg"
+        app:layout_constraintEnd_toStartOf="@+id/dayFragment_dayTitleUnderLineRight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFragment_dayTitleUnderLineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/dayFragment_addCloseBackGround"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@drawable/bg_pdd_fullround"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dayFragment_addClosetHelperEnd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+        app:layout_constraintTop_toTopOf="@id/dayFragment_addCloseButton" />
+
+    <TextView
+        android:id="@+id/dayFragment_addCloseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mg_mds"
+        android:layout_marginTop="@dimen/mg_md"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="reminder"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_mdl"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround"
+        app:layout_constraintTop_toTopOf="@id/dayFragment_addCloseBackGround" />
+
+
+    <ImageView
+        android:id="@+id/dayFragment_addCloseIconBG"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_w_fullround"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseButton"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseButton"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addCloseButton"
+        app:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseButton" />
+
+    <ImageView
+        android:id="@+id/dayFragment_addCloseLocationIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_email"
+        android:tag="3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseType"
+        app:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseLinkIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseType"
+        app:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseType" />
+
+
+    <ImageView
+        android:id="@+id/dayFragment_addCloseLinkIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_internet"
+        android:tag="2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLocationIcon"
+        app:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseReminderIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLocationIcon"
+        app:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLocationIcon" />
+
+    <ImageView
+        android:id="@+id/dayFragment_addCloseReminderIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_clock"
+        android:tag="1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dayFragment_addCloseLinkIcon"
+        app:layout_constraintEnd_toStartOf="@+id/dayFragment_addCloseButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayFragment_addCloseLinkIcon"
+        app:layout_constraintTop_toTopOf="@+id/dayFragment_addCloseLinkIcon" />
+
+
+    <EditText
+        android:id="@+id/dayFragment_addClosetTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mg_mds"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="Title"
+        android:inputType="text"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_light"
+        android:textSize="@dimen/font_md"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addCloseReminderIcon"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseType" />
+
+    <EditText
+        android:id="@+id/dayFragment_addClosetBody"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/mg_mds"
+        android:layout_marginRight="@dimen/mg_md"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:fontFamily="@font/sanchezregular_family"
+        android:gravity="top|left"
+        android:hint="Text"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_light"
+        android:textSize="@dimen/font_md"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetTitle" />
+
+    <EditText
+        android:id="@+id/dayFragment_addClosetHour"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mg_mds"
+        android:layout_marginRight="@dimen/mg_sms"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:drawableLeft="@drawable/ic_clock"
+        android:drawablePadding="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="Houre"
+        android:inputType="number"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_light"
+        android:textSize="@dimen/font_md"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+        app:layout_constraintRight_toLeftOf="@id/dayFragment_addClosetMin"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody" />
+
+    <EditText
+        android:id="@+id/dayFragment_addClosetMin"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mg_sms"
+        android:layout_marginTop="@dimen/mg_mds"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:drawableLeft="@drawable/ic_minute"
+        android:drawablePadding="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="Minute"
+        android:inputType="number"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_light"
+        android:textSize="@dimen/font_md"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/dayFragment_addClosetHour"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetBody" />
+
+    <EditText
+        android:id="@+id/dayFragment_addClosetLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mg_mds"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:drawableLeft="@drawable/ic_internet"
+        android:drawablePadding="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="Link"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_md"
+
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetHour" />
+
+    <EditText
+        android:id="@+id/dayFragment_emailAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mg_mds"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="email addres"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_md"
+        android:visibility="gone"
+
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseType"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addClosetBody"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetHour" />
+
+
+    <ImageView
+        android:id="@+id/dayFragment_addCloseButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/mg_md"
+        android:background="@drawable/bg_circle_primarylight"
+        android:rotation="135"
+        android:src="@drawable/ic_close"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_dayTitle" />
+
+
+    <View
+        android:id="@+id/dayFragment_addClosetHelperEnd"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_emailAddress"
+
+        />
+
+    <Button
+        android:id="@+id/dayFragment_addClosetSubmtin"
+
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_accenct_primarylight"
+        android:fontFamily="@font/sanchezregular_family"
+        android:text="submit"
+        android:textAllCaps="true"
+        android:textColor="@color/colorMintCream"
+        android:textSize="@dimen/font_mdl"
+        android:textStyle="italic|bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dayFragment_addCloseBackGround"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_addCloseBackGround"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_addCloseBackGround"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addCloseBackGround" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dayFragment_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="@id/dayFragment_guideLineBottom"
+        app:layout_constraintLeft_toLeftOf="@id/dayFragment_guideLineLeft"
+        app:layout_constraintRight_toRightOf="@id/dayFragment_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@id/dayFragment_addClosetSubmtin" />
+
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pdd_fullround"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/mg_md"
+    android:layout_marginHorizontal="@dimen/mg_sm"
+    android:layout_marginBottom="@dimen/mg_sm">
+
+    <TextView
+        android:id="@+id/recyclerMapItem_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textStyle="italic"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textSize="@dimen/font_md"
+        android:textColor="@color/colorMintCream"
+        android:text="help text"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/mg_sm"
+        />
+    <Button
+        android:id="@+id/recyclerMapItem_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/mg_md"
+        android:background="@drawable/btn_mintwhite_primarylight"
+        android:layout_marginVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textStyle="italic|bold"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textSize="@dimen/font_md"
+        />
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    app:layoutDescription="@xml/activity_splash_scene"
+    tools:context=".view.SplashActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashActivity_guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashActivity_guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashActivity_guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashActivity_guidelineDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="40dp" />
+
+    <ImageView
+        android:id="@+id/splashActivity_iconLocation"
+        android:layout_width="@dimen/icon_splash"
+        android:layout_height="@dimen/icon_splash"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintLeft_toLeftOf="@+id/splashActivity_guidelineLeft"
+        app:layout_constraintTop_toTopOf="@id/splashActivity_guidelineTop" />
+
+    <ImageView
+        android:id="@+id/splashActivity_mainIcon"
+        android:layout_width="@dimen/icon_splash_lg"
+        android:layout_height="@dimen/icon_splash_lg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/ic_todolist" />
+
+    <ImageView
+        android:id="@+id/splashActivity_iconTime"
+        android:layout_width="@dimen/icon_splash"
+        android:layout_height="@dimen/icon_splash"
+        android:layout_margin="16dp"
+        app:layout_constraintRight_toRightOf="@+id/splashActivity_guidelineRight"
+        app:layout_constraintTop_toTopOf="@id/splashActivity_guidelineTop"
+        app:srcCompat="@drawable/baseline_alarm_black_24dp" />
+
+    <ImageView
+        android:id="@+id/splashActivity_iconCalender"
+        android:layout_width="@dimen/icon_splash"
+        android:layout_height="@dimen/icon_splash"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/splashActivity_guidelineDown"
+        app:layout_constraintRight_toRightOf="@+id/splashActivity_guidelineRight"
+        app:srcCompat="@drawable/baseline_date_range_black_24dp" />
+
+    <ImageView
+        android:id="@+id/splashActivity_iconNote"
+        android:layout_width="@dimen/icon_splash"
+        android:layout_height="@dimen/icon_splash"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/splashActivity_guidelineDown"
+        app:layout_constraintLeft_toLeftOf="@+id/splashActivity_guidelineLeft"
+        app:srcCompat="@drawable/ic_notes" />
+
+    <ImageView
+        android:id="@+id/splashActivity_iconExplosion"
+        android:layout_width="@dimen/icon_splash_lg"
+        android:layout_height="@dimen/icon_splash_lg"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_explosion" />
+
+    <ImageView
+        android:id="@+id/splashActivity_iconPhone"
+        android:layout_width="@dimen/icon_splash_lg"
+        android:layout_height="@dimen/icon_splash_lg"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cellphone" />
+
+    <TextView
+        android:id="@+id/splashActivity_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:fontFamily="@font/sanchezregular_family"
+        android:gravity="center"
+        android:shadowColor="@color/colorPrimaryDark_dark"
+        android:shadowDx="20"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/splashActivity_text"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/font_lg_title"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

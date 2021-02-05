@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SettingActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/SettingActivity_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintLeft_toLeftOf="@id/SettingActivity_leftGuide"
+        android:layout_marginTop="@dimen/mg_sm"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="finishBackToHome"/>
+
+    <TextView
+        android:id="@+id/SettingActivity_underLineBack"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SettingActivity_back"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary_light"
+        />
+
+
+
+    <TextView
+        android:id="@+id/SettingActivity_emailText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="email address"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textColor="@color/colorMintCream"
+        android:textSize="@dimen/font_mdl"
+        android:layout_marginLeft="@dimen/mg_md"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/SettingActivity_leftGuide"
+        app:layout_constraintRight_toRightOf="@id/SettingActivity_rightGuide"
+        app:layout_constraintTop_toBottomOf="@+id/SettingActivity_underLineBack"
+        />
+
+    <EditText
+        android:id="@+id/SettingActivity_email"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/mg_sm"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="email addres"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_mdl"
+
+        app:layout_constraintLeft_toLeftOf="@id/SettingActivity_leftGuide"
+        app:layout_constraintRight_toRightOf="@id/SettingActivity_rightGuide"
+        app:layout_constraintTop_toBottomOf="@+id/SettingActivity_emailText"
+        />
+
+
+    <TextView
+        android:id="@+id/SettingActivity_passwordText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="password"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textColor="@color/colorMintCream"
+        android:textSize="@dimen/font_mdl"
+        android:layout_marginLeft="@dimen/mg_md"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/SettingActivity_leftGuide"
+        app:layout_constraintRight_toRightOf="@id/SettingActivity_rightGuide"
+        app:layout_constraintTop_toBottomOf="@+id/SettingActivity_email"
+        />
+
+    <EditText
+        android:id="@+id/SettingActivity_password"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/mg_sm"
+        android:background="@drawable/bg_smroundf_w_borderf_prim"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="@dimen/mg_sm"
+        android:fontFamily="@font/sanchezregular_family"
+        android:hint="email addres"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/mg_sm"
+        android:paddingVertical="@dimen/mg_sms"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:textSize="@dimen/font_mdl"
+
+        app:layout_constraintLeft_toLeftOf="@id/SettingActivity_leftGuide"
+        app:layout_constraintRight_toRightOf="@id/SettingActivity_rightGuide"
+        app:layout_constraintTop_toBottomOf="@+id/SettingActivity_passwordText"
+        />
+
+
+
+    <Button
+        android:onClick="sumbitEmailChange"
+        android:id="@+id/SettingActivity_submit"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="submit change"
+        android:fontFamily="@font/sanchezregular_family"
+        android:textSize="@dimen/font_md"
+        android:textAllCaps="false"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorPrimaryDark_dark"
+        android:background="@drawable/btn_mintwhite_primarylight"
+        app:layout_constraintLeft_toLeftOf="@id/SettingActivity_leftGuide"
+        app:layout_constraintRight_toRightOf="@id/SettingActivity_rightGuide"
+        app:layout_constraintTop_toBottomOf="@+id/SettingActivity_password"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/SettingActivity_rightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/mg_md" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/SettingActivity_leftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/mg_md" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

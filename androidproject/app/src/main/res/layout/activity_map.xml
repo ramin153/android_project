@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.MapActivity"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/SettingActivity_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginTop="@dimen/mg_sm"
+            android:onClick="finishBackToHomeMap"/>
+
+        <TextView
+            android:id="@+id/SettingActivity_underLineBack"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorPrimary_light"
+            />
+        <FrameLayout
+            android:id="@+id/MapActivity_fragmentPlace"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/mg_sm"
+            android:layout_height="320dp"
+
+             />
+        <TextView
+            android:id="@+id/SettingActivity_underLineBack2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorPrimary_light"
+            android:layout_marginBottom="@dimen/mg_md"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/MapActivity_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

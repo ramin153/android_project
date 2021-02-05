@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    image size-->
+    <dimen name="icon_splash">60dp</dimen>
+    <dimen name="icon_splash_lg">120dp</dimen>
+
+    <dimen name="icon_home_navItem">40dp</dimen>
+
+<!--    font size-->
+    <dimen name="font_lg_title">40sp</dimen>
+    <dimen name="font_lgs_title">36sp</dimen>
+
+
+    <dimen name="font_lg">24sp</dimen>
+    <dimen name="font_lgs">20sp</dimen>
+    <dimen name="font_mdl">18sp</dimen>
+    <dimen name="font_md">16sp</dimen>
+    <dimen name="font_mds">12sp</dimen>
+    <dimen name="font_sm">8sp</dimen>
+
+<!--    margin size-->
+    <dimen name="mg_md">16dp</dimen>
+    <dimen name="mg_mds">12dp</dimen>
+    <dimen name="mg_sm">8dp</dimen>
+    <dimen name="mg_sms">6dp</dimen>
+<!--guide line-->
+    <dimen name="gl_md">16dp</dimen>
+<!--    corner radius-->
+    <dimen name="cr_md">25dp</dimen>
+</resources>
